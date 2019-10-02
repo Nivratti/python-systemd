@@ -13,21 +13,19 @@ Tutorial to run Python script via systemd
     - systemctl restart name.service
 
 ---
----
 # Creating Service file
----
 ## Syntax 
-'''
+```
 [Unit]
-Description=```Enter Service Description```
+Description=**Enter Service Description**
 After=syslog.target
 
 [Service]
 Type=simple
-User=```Enter username```
-Group=```Enter groupname```
-WorkingDirectory=```Enter working dir path```
-ExecStart=```Enter python file path```
+User=**Enter username**
+Group=**Enter groupname**
+WorkingDirectory=**Enter working dir path**
+ExecStart=**Enter python file path**
 StandardOutput=syslog
 StandardError=syslog
 
