@@ -24,8 +24,8 @@ After=syslog.target
 Type=simple
 User=**Enter username**
 Group=**Enter groupname**
-WorkingDirectory=**Enter working dir path**
-ExecStart=**Enter python file path**
+WorkingDirectory=/path/to/working/dir/
+ExecStart=/usr/bin/python /python/file/path/demo.py
 StandardOutput=syslog
 StandardError=syslog
 
@@ -44,7 +44,7 @@ Type=simple
 User=nivratti
 Group=nivratti
 WorkingDirectory=/programming/python/projects/
-ExecStart=/programming/python/projects/python-demo.py
+ExecStart=/usr/bin/python /programming/python/projects/python-demo.py
 StandardOutput=syslog
 StandardError=syslog
 
@@ -55,15 +55,16 @@ WantedBy=multi-user.target
 
 # Imp -- Specify python interpreter
 ### Specify Python interpreter 
- - at first line of python file
-  ```
-  #!/usr/bin/python -u
-  ```
- - or in unit(Service File)
+ - In unit(Service File)
    __/usr/bin/python__ or any other path
    ```
    ExecStart=/usr/bin/python /file/path/python_demo_service.py
    ```
+   
+  - or at first line of python file
+  ```
+  #!/usr/bin/python -u
+  ```
 ---
 
 # Service file configuration details
