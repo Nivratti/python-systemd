@@ -26,6 +26,7 @@ User=**Enter username**
 Group=**Enter groupname**
 WorkingDirectory=/path/to/working/dir/
 ExecStart=/usr/bin/python /python/file/path/demo.py
+Restart=on-failure
 StandardOutput=syslog
 StandardError=syslog
 
