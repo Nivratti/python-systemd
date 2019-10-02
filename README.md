@@ -32,3 +32,22 @@ StandardError=syslog
 [Install]
 WantedBy=multi-user.target
 ```
+
+## Example
+```
+[Unit]
+Description=Twitter News Service
+After=syslog.target
+
+[Service]
+Type=simple
+User=nivratti
+Group=nivratti
+WorkingDirectory=/programming/python/projects/
+ExecStart=/programming/python/projects/python-demo.py
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
+```
