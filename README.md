@@ -51,3 +51,10 @@ StandardError=syslog
 [Install]
 WantedBy=multi-user.target
 ```
+---
+
+# Imp -- Specify python interpreter
+Specify Python interpreter at first line of python file
+```
+#!/usr/bin/python -u
+```
