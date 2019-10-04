@@ -37,7 +37,7 @@ WantedBy=multi-user.target
 ## Example
 ```
 [Unit]
-Description=Twitter News Service
+Description=Python Demo
 After=syslog.target
 
 [Service]
