@@ -135,3 +135,39 @@ If you moved script file we also need to change the script's location in our uni
 ```
 ExecStart=/usr/bin/python /new/path/python_demo_service.py
 ```
+
+# Service Management
+Manage Systemd Services and Units.
+--
+## Starting and Stopping Services
+To __start__ a systemd service, executing instructions in the service’s unit file, use the __start__ command. 
+```
+sudo systemctl start application_name
+```
+
+To stop a currently running service, you can use the __stop__ command instead:
+```
+sudo systemctl stop application_name
+```
+## Restarting
+To restart a running service, you can use the __restart__ command:
+```
+sudo systemctl restart application_name
+```
+
+## Enabling and Disabling Services
+To tell __systemd__ to start services __automatically at boot__, you must enable them.
+To start a service at boot, use the enable command:
+```
+sudo systemctl enable application_name
+```
+To disable the service from starting automatically, you can type:
+```
+sudo systemctl disable application_name
+```
+
+## Checking the Status of Services
+To check the status of a service on your system, you can use the status command
+```
+systemctl status application_name
+```
