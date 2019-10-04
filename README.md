@@ -140,9 +140,9 @@ If you moved script file we also need to change the script's location in our uni
    ```
    ExecStart=/usr/bin/python /new/path/python_demo_service.py
    ```
+---
 
 # Service Management
----
 Manage Systemd Services and Units.
 ### Starting and Stopping Services
 To __start__ a systemd service, executing instructions in the service’s unit file, use the __start__ command. 
