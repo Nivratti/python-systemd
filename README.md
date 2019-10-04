@@ -46,6 +46,7 @@ User=nivratti
 Group=nivratti
 WorkingDirectory=/programming/python/projects/
 ExecStart=/usr/bin/python /programming/python/projects/python-demo.py
+Restart=on-failure
 StandardOutput=syslog
 StandardError=syslog
 
