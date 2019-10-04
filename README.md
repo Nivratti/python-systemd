@@ -176,3 +176,4 @@ To check the status of a service on your system, you can use the status command
 ```
 systemctl status application_name
 ```
+---
