@@ -132,12 +132,17 @@ Restart=on-failure
 ---
 # Moving the Python Script
 If you moved script file we also need to change the script's location in our unit file: update the __ExecStart=...__ line to
-```
-ExecStart=/usr/bin/python /new/path/python_demo_service.py
-```
+ - open the service file
+   ```
+   sudo nano /path/to/service_file/service_file_name.py
+   ```
+ - update the __ExecStart=...__ line
+   ```
+   ExecStart=/usr/bin/python /new/path/python_demo_service.py
+   ```
 
 # Service Management
---
+---
 Manage Systemd Services and Units.
 ### Starting and Stopping Services
 To __start__ a systemd service, executing instructions in the service’s unit file, use the __start__ command. 
