@@ -17,40 +17,68 @@ Tutorial to run Python script via systemd
 ## Syntax 
 ```
 [Unit]
+# service description
 Description=**Enter Service Description**
 After=syslog.target
 
 [Service]
 Type=simple
+
+# user and group -- to run service
 User=**Enter username**
 Group=**Enter groupname**
+
+# project working directory
 WorkingDirectory=/path/to/working/dir/
-ExecStart=/usr/bin/python /python/file/path/demo.py
+
+# Command to execute when the service is started
+ExecStart=/usr/bin/python /python/project/path/demo.py
+
+# Automatically restart the service if it crashes
 Restart=on-failure
+
+# set Python's buffering of STDOUT and STDERR value to systemd, so that output from the
+# service shows up immediately in systemd's logs
 StandardOutput=syslog
 StandardError=syslog
 
 [Install]
+# Tell systemd to automatically start this service when the system boots
+# (assuming the service is enabled)
 WantedBy=multi-user.target
 ```
 
 ## Example
 ```
 [Unit]
+# service description
 Description=Python Demo
 After=syslog.target
 
 [Service]
 Type=simple
+
+# user and group -- to run service
 User=nivratti
 Group=nivratti
+
+# project working directory
 WorkingDirectory=/programming/python/projects/
+
+# Command to execute when the service is started
 ExecStart=/usr/bin/python /programming/python/projects/python-demo.py
+
+# Automatically restart the service if it crashes
 Restart=on-failure
+
+# set Python's buffering of STDOUT and STDERR value to systemd, so that output from the
+# service shows up immediately in systemd's logs
 StandardOutput=syslog
 StandardError=syslog
 
 [Install]
+# Tell systemd to automatically start this service when the system boots
+# (assuming the service is enabled)
 WantedBy=multi-user.target
 ```
 ---
