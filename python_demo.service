@@ -16,6 +16,9 @@ WorkingDirectory=/programming/python/projects/
 # Command to execute when the service is started
 ExecStart=/usr/bin/python /programming/python/projects/python-demo.py
 
+# Automatically restart the service if it crashes
+Restart=on-failure
+
 # set Python's buffering of STDOUT and STDERR value to systemd, so that output from the
 # service shows up immediately in systemd's logs
 StandardOutput=syslog
