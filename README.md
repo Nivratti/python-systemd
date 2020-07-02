@@ -32,7 +32,7 @@ Group=**Enter groupname**
 WorkingDirectory=/path/to/working/dir/
 
 # Command to execute when the service is started
-ExecStart=/usr/bin/python /python/project/path/demo.py
+ExecStart=/usr/bin/python /path/to/python/demo_script.py
 
 # Automatically restart the service if it crashes
 Restart=on-failure
@@ -88,7 +88,7 @@ WantedBy=multi-user.target
  - In unit(Service File)
    __/usr/bin/python__ or any other path
    ```
-   ExecStart=/usr/bin/python /file/path/python_demo_service.py
+   ExecStart=/usr/bin/python /file/path/python_demo_script.py
    ```
    
   - or at first line of python file
@@ -167,7 +167,7 @@ If you moved script file we also need to change the script's location in our uni
    ```
  - update the __ExecStart=...__ line
    ```
-   ExecStart=/usr/bin/python /new/path/python_demo_service.py
+   ExecStart=/usr/bin/python /new/path/python_demo_script.py
    ```
 ---
 
